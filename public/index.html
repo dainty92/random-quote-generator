@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Random Quote Generator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Random Quote Generator</h1>
+        <div id="quote">Loading...</div>
+        <button id="new-quote-btn">New Quote</button>
+        <!-- Add a Tweet button with the data-text attribute -->
+        <a id="tweet-button" href="https://twitter.com/intent/tweet" data-text="" data-show-count="false" target="_blank">Tweet</a>
+
+        <button id="save-button">Save Quote</button>
+
+        <a id="view-saved-link" href="saved-quotes.html">View Saved Quotes</a>
+
+        <div id="author-info">
+            <h2>Author Information</h2>
+            <p><strong>Name:</strong> <span id="author-name">Loading...</span></p>
+            <p><strong>Biography:</strong></p>
+            <p id="author-bio">Loading...</p>
+        </div>  
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

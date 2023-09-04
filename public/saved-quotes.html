@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saved Quotes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 24px;
+            margin: 20px;
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #444;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        #back-button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        #back-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Saved Quotes</h1>
+        <!-- Display saved quotes here -->
+        <ul id="quote-list"></ul>
+        <!-- Add a button to go back to the random quote generator -->
+        <button id="back-button">Back to Random Quote Generator</button>
+    </div>
+
+    <script>
+        const backButton = document.getElementById('back-button');
+
+        // Event listener for the "Back" button
+        backButton.addEventListener('click', () => {
+            // Redirect back to the random quote generator page
+            window.location.href = 'index.html';
+        });
+
+        // Function to display saved quotes
+        function displaySavedQuotes(savedQuotes) {
+            const quoteList = document.getElementById('quote-list');
+            quoteList.innerHTML = ''; // Clear the previous list
+
+            savedQuotes.forEach((quote, index) => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${index + 1}. ${quote}`;
+                quoteList.appendChild(listItem);
+            });
+        }
+
+        // Retrieve saved quotes from local storage and display them
+        const savedQuotes = JSON.parse(localStorage.getItem('savedQuotes')) || [];
+        displaySavedQuotes(savedQuotes);
+    </script>
+</body>
+</html>

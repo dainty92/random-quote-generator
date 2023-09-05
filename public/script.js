@@ -5,7 +5,7 @@ const saveButton = document.getElementById('save-button');
 
 async function fetchAuthorInfo(authorName) {
   try {
-    const response = await fetch(`http://localhost:3001/fetch-author-info?authorName=${encodeURIComponent(authorName)}`);
+    const response = await fetch(`https://random-quote-now.onrender.com/fetch-author-info?authorName=${encodeURIComponent(authorName)}`);
     const data = await response.json();
     
     // Handle the retrieved author information
@@ -66,7 +66,7 @@ async function fetchApiKey() {
     const data = await response.json();
     const apiKey = data.apiKey;
     // Use the retrieved API key for your API requests
-    console.log('API Key:', apiKey);
+    // console.log('API Key:', apiKey);
     // Perform your API requests with apiKey
   } catch (error) {
     console.error('Error fetching API key:', error);

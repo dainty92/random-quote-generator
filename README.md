@@ -50,7 +50,7 @@ A web application that generates random quotes and allows users to tweet them. T
    node app.js
    ```
 
-5. Open your web browser and visit [http://localhost:3001](http://localhost:3001) to use the Random Quote Generator.
+5. Open your web browser and visit https://random-quote-now.onrender.com/ to use the Random Quote Generator.
 
 ## Author Information
 

@@ -75,5 +75,5 @@ app.get('/random-quote', async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`Server is running on https://random-quote-now.onrender.com`);
 });

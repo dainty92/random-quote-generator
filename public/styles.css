@@ -19,6 +19,12 @@ body {
     margin: 20px;
     color: #333;
 }
+#button {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 #new-quote-btn {
     padding: 10px 20px;
     font-size: 18px;
@@ -63,6 +69,7 @@ body {
     font-size: 18px;
     text-decoration: none;
     color: #007BFF;
+    padding: 10px 20px;
 }
 #view-saved-link:hover {
     text-decoration: underline;

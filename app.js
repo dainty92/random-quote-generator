@@ -6,6 +6,8 @@ const fetch = require('node-fetch');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
+
 // Enable CORS in your server
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
